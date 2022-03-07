@@ -23,7 +23,7 @@
             <th>Nummer</th>
             <th>Naam</th>
             <th>Beschrijving</th>
-            <th width="280px">Action</th>
+            <th width="280px">Actie</th>
         </tr>
         @foreach ($products as $product)
             <tr>
