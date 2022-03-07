@@ -4,15 +4,15 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Laravel 8 CRUD Example from scratch - ItSolutionStuff.com</h2>
+                <h2>Haradin Asghedom items</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="{{ route('products.create') }}"> Maak een nieuwe post</a>
             </div>
         </div>
     </div>
 
-    @if ($message = Session::get('success'))
+    @if ($message = Session::get('Gelukt!'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
         </div>
@@ -20,9 +20,9 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>No</th>
-            <th>Name</th>
-            <th>Details</th>
+            <th>Nummer</th>
+            <th>Naam</th>
+            <th>Beschrijving</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($products as $product)
@@ -33,14 +33,14 @@
                 <td>
                     <form action="{{ route('products.destroy',$product->id) }}" method="POST">
 
-                        <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">Show</a>
+                        <a class="btn btn-info" href="{{ route('products.show',$product->id) }}">bekijk</a>
 
-                        <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('products.edit',$product->id) }}">Bewerk</a>
 
                         @csrf
                         @method('DELETE')
 
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">Weg</button>
                     </form>
                 </td>
             </tr>
